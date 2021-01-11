@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --brightYellow: hsl(71, 73%, 54%);
+  --cyanLight: hsl(179, 49%, 56%);
+  --lightGray: hsl(204, 43%, 93%);
+  --grayishBlue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+section {
+  background-color: var(--grayishBlue);
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  background-color: white;
+  border-radius: 6px;
+  margin: 0 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-content: center;
+}
+
+.item-1 h2 {
+  color: var(--cyan);
+  margin: 1.5em 1em;
+}
+.item-1 h4 {
+  color: var(--brightYellow);
+  font-size: 18px;
+  width: 80%;
+  margin-left: 1.2em;
+  margin-bottom: 1em;
+}
+
+.item-1 p {
+  width: 80%;
+  margin-left: 1.2em;
+  line-height: 1.5;
+  color: var(--grayishBlue);
+  margin-bottom: 2em;
+}
+
+.item-2 {
+  background-color: var(--cyan);
+  color: white;
+}
+
+.item-2 h3 {
+  margin-left: 1em;
+  padding-top: 1.5em;
+}
+
+.item-2 p {
+  margin-left: 1.2em;
+  line-height: 2;
+}
+
+.item-2 span {
+  color: white;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.item-2 p:first-of-type {
+  color: var(--lightGray);
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  background-color: var(--brightYellow);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 2em 2em;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.item-3 {
+  background-color: var(--cyanLight);
+  color: white;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.item-3 h3 {
+  margin: 1.2em 1.2em;
+}
+
+.item-3 p {
+  margin: 1.2em 1.2em;
+  color: var(--lightGray);
+}
+
+@media screen and (min-width: 720px) {
+  section {
+    height: 100vh;
+  }
+
+  .container {
+    max-width: 750px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "item-1 item-1"
+      "item-2 item-3";
+  }
+
+  .item-1 {
+    grid-area: item-1;
+    margin-left: 2rem;
+    width: 90%;
+  }
+
+  .item-2 {
+    grid-area: item-2;
+    border-bottom-left-radius: 6px;
+  }
+
+  .item h3 {
+    margin-left: 3em;
+  }
+
+  .item-2 p {
+    margin-left: 3.3em;
+  }
+  .item-3 {
+    grid-area: item-3;
+    border-bottom-left-radius: 0;
+  }
+  .item-3 p {
+    margin-left: 3.3em;
+  }
+
+  .btn {
+    margin: 2em 4em;
+  }
+}
